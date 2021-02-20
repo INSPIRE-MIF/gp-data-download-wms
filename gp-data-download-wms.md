@@ -97,7 +97,7 @@ So, the question may arise if view services offer so many advantages, can they b
 
 # Scope <a name="scope"></a> 
 
-The document proposes the utilisation of the WMS view service as an interface for downloading spatial datasets. The paper describes how to set up WMS operations to allow users to download spatial data sets.
+The document proposes the utilisation of the WMS view service as an interface for downloading spatial data sets. The paper describes how to set up WMS operations to allow users to download spatial data sets.
 
 The solution with slight modifications could also be applied to the WMTS view service.
 
