@@ -161,7 +161,7 @@ The most suitable for returning URIs is HTML because it returns links most easil
 
 In the case of other formats mentioned above, returned links have to be correctly displayed by client applications and not all WMS clients support such functionality.
 
-In addition to URIs, GFI response should return metadata describing the spatial datasets or the subset. It can contain information about returned resources, e.g.:
+In addition to URIs, GFI response should return metadata describing the spatial datasets or the subset. It can contain information describing downloadable resources, e.g.:
 
 - date of creation or last update,
 - spatial resolution,
