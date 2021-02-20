@@ -87,7 +87,7 @@ Without a doubt, the spatial data sets are the most critical INSPIRE component i
 - view services that allow the users to display the data and
 - download services that allow downloading copy of the spatial datasets.
 
-According to INSPIRE framework view services are rather intended for simple data analysis and initial quality assessment of the spatial data sets. The view services are light, supported by more client applications and more intuitive from an average user's perspective. There are only two types of view services recognized by INSPIRE: Web Map Services (WMS and Web Map Tile Services (WMTS)
+Within the INSPIRE framework view services are rather intended for simple data analysis and initial quality assessment of the spatial data sets. The view services are light, supported by more client applications and more intuitive from an average user's perspective. There are only two types of view services recognized by INSPIRE: Web Map Services (WMS and Web Map Tile Services (WMTS)
 
 On the other hand, download services are rather complex. Moreover, there are different types of download services designed for sharing various types of spatial datasets: Web Feature Service (WFS), ATOM feed, Sensor Observation Service (SOS) and finally Web Coverage Service (WCS). Each of the types requires specific client software that "understands" the particular standard. It is difficult in practice to find client applications that fully support the above-mentioned standards of download services. It is similar in the case of a data publisher perspective. It is much easier to set up and publish a view service compared to the download service.
 
