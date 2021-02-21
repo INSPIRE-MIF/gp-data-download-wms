@@ -115,7 +115,7 @@ The view services allowing download should support at least two last and most po
 
 The view services allowing download must support GetCapabilities and GetMap, GetFeatureInfo (GFI) operations.
 
-The view services allowing download from a service's user perspective works like any other WMS service. The solution uses WMS service, so it can be utilised in any application adopting the WMS standard. In a typical use case scenario shown it Figure 1, a user via the WMS client application points out on the map location for which data should be downloaded. GetFeatureInfo request is sent to the server, and the response returns metadata and links to the dataset subset covering an indicated area. Then the user clicks on the link to an appropriate subset and downloads it.
+The view services allowing download from a service's user perspective works like any other WMS service. The solution uses WMS service, so it can be utilised in any application adopting the WMS standard. In a typical use case scenario shown it Figure 1, a user via the WMS client application points out on the map location for which data should be downloaded. GetFeatureInfo request is sent to the server, and the response returns metadata and links to the dataset subset covering an indicated area. Then the user clicks on the link to an appropriate resource (spatial data set or its subset) and downloads it.
 
 ![The sequence diagram showing typical use case scenario of WMS download service](https://github.com/marcingrudzien/gp-data-download-wms/blob/main/resources/pictures/downloadDataViaWMS.png "The sequence diagram showing typical use case scenario of WMS download service")
 
