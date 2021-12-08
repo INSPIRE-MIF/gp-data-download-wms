@@ -1,1 +1,1 @@
-# *Description of a tesbed implementation of downloadable WMS*
+# **Description of a tesbed implementation of downloadable WMS**
