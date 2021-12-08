@@ -19,8 +19,7 @@ WEB
 	METADATA
 		WMS_TITLE "WMS service with index of current orthoimagery"
 		WMS_ABSTRACT "The service publishes spatial extents of current orthoimagery sheets and sheets' attributes including download URL"
-		#WMS_ONLINERESOURCE "http://192.168.103.42/cgi-bin/mapserv?map=/srv/testbed/indexortho.map"
-		WMS_ONLINERESOURCE "http://192.168.103.42/cgi-bin/indexortho"
+		WMS_ONLINERESOURCE "https://mapy.geoportal.gov.pl/wss/testbed/wmsdownload/mapserver"
 		WMS_SRS "EPSG:2180 EPSG:4326 EPSG:3857"
 		WMS_FEATURE_INFO_MIME_TYPE "text/html"
 		WMS_ENCODING "UTF-8"
