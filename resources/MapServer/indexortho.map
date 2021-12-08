@@ -27,21 +27,21 @@ WEB
 		WMS_FEES "NONE"
 		WMS_COUNTRY "Poland"
 		wms_enable_request "*"
-			ows_contactorganization "The Head Office of Geodesy and Cartography"
-			ows_contactposition "publisher"
-			ows_contactperson "Marcin Grudień"
-			ows_contactelectronicmailaddress "marcin.grudzien@gugik.gov.pl"
-			ows_contactvoicetelephone "+48225322501"
-			ows_ADDRESS "Wspólna 2"
-			ows_ADDRESSTYPE "postal"
-			ows_CITY "Warszawa"
-			ows_POSTCODE "00-926"
-			ows_STATEORPROVINCE "mazowieckie"
-			ows_COUNTRY "Poland"
-			ows_hoursofservice "8:15-16:15 CET"
-			ows_contactinstructions "during hours of service"
-			ows_role "provider"
-			ows_contactposition "custodian"    
+		ows_contactorganization "The Head Office of Geodesy and Cartography"
+		ows_contactposition "publisher"
+		ows_contactperson "Marcin Grudień"
+		ows_contactelectronicmailaddress "marcin.grudzien@gugik.gov.pl"
+		ows_contactvoicetelephone "+48225322501"
+		ows_ADDRESS "Wspólna 2"
+		ows_ADDRESSTYPE "postal"
+		ows_CITY "Warszawa"
+		ows_POSTCODE "00-926"
+		ows_STATEORPROVINCE "mazowieckie"
+		ows_COUNTRY "Poland"
+		ows_hoursofservice "8:15-16:15 CET"
+		ows_contactinstructions "during hours of service"
+		ows_role "provider"
+		ows_contactposition "custodian"    
 	END
 	IMAGEURL "/home/tmp/"
 	IMAGEPATH "/home/tmp/mapservercache/"
@@ -93,9 +93,9 @@ LAYER
 		NAME "2020"
 		EXPRESSION ('[year]' eq '2020')
 		STYLE
-            COLOR 151 219 242
-            OUTLINECOLOR 0 197 255
-			WIDTH 1
+	            COLOR 151 219 242
+        	    OUTLINECOLOR 0 197 255
+	            WIDTH 1
 		END #STYLE  
 		LABEL 
 			POSITION   CC 
@@ -118,9 +118,9 @@ LAYER
 		NAME "2019"
 		EXPRESSION ('[year]' eq '2019')
 		STYLE
-            COLOR 255 235 143
-            OUTLINECOLOR 255 191 117
-			WIDTH 1
+	            COLOR 255 235 143
+	            OUTLINECOLOR 255 191 117
+	            WIDTH 1
 		END #STYLE  
 		LABEL 
 			POSITION   CC 
@@ -143,9 +143,9 @@ LAYER
 		NAME "2018 and older"
 		EXPRESSION ('[year]' eq '2018' OR '[year]' eq '2017' OR '[year]' eq '2016' OR '[year]' eq '2015' OR '[year]' eq '2014' OR '[year]' eq '2013' OR '[year]' eq '2012' OR '[year]' eq '2010' OR '[year]' eq '1999' OR '[year]' eq '1998' OR '[year]' eq '1995')
 		STYLE
-            COLOR 255 190 190
-            OUTLINECOLOR 255 138 130
-			WIDTH 1
+	            COLOR 255 190 190
+	            OUTLINECOLOR 255 138 130
+	            WIDTH 1
 		END #STYLE  
 		LABEL 
 			POSITION   CC 
