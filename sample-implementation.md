@@ -22,7 +22,7 @@ The utilised data sample can be downloaded from here.
 
 # Examples of implementations
 This document does not cover software installation or WMS services configuration details. These are at least sufficiently explained on the related vendors' websites. The paper only focuses on setting up services in the areas crucial to the implementation of downloadable WMS services. In particular, the document presents examples of changes that can be applied to adjust HTML GetFeatureInfo (GFI) responses of WMS services to display links to orthoimagery data set subsets (sheets).
-The examples of the services are relatively simple. The documented approach can be applied to create better looking, more complex and interactive GFI responses containing additional Cascading Style Sheets (CSS) or JavaScript code.
+The examples of the services are relatively simple. The documented approach can be applied to create user friendly, better looking, more complex and interactive GFI responses containing additional Cascading Style Sheets (CSS) or JavaScript code.
 
 ## Example of MapServer implementation
 Details regarding the customisation of GFI responses are covered in detail in MapServer documentation.
