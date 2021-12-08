@@ -31,7 +31,7 @@ This section describes the configuration of the WMS service in MapServer publish
 To force MapServer to use a custom template, its location must be advertised in the MapServer configuration file, for example, by using the TEMPLATE parameter in the LAYER section of the configuration file. This is how it was done in the sample service.
 TEMPLATE "index.html"
 In this case the HTML GFI template document is located in index.html file in exactly the same folder as MapServer service configuraton file. The utilised content of index.html file looks like this 
-'''
+```
 <!-- MapServer Template -->
 <html>
 <head><title>MapServer GFI response</title></head>
@@ -45,7 +45,7 @@ In this case the HTML GFI template document is located in index.html file in exa
 <strong>Download link:</strong><br><a href="[url]" target="_blank">Click here to download</a><br>
 </body>
 </html>
-'''
+```
 The values of attributes are included in HTML code by providing their names in square brackets, e.g. [code]. The link to the downloadable orthoimagery sheet has been encoded using HTML <a> element, e.g. ><a href="[url]" target="_blank">Click here to download</a>
 The example of the GFI response utilising the template can be seen by clicking on this link which is an example of a standard GFI request
 https://mapy.geoportal.gov.pl/wss/testbed/wmsdownload/mapserver?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetFeatureInfo&BBOX=46.73160157058823216,13.42562750000000094,56.94499842941176126,25.14667249999999754&CRS=EPSG:4326&WIDTH=1275&HEIGHT=1111&LAYERS=OrthoimageryIndex&STYLES=&FORMAT=image/png&QUERY_LAYERS=OrthoimageryIndex&INFO_FORMAT=text/html&I=929&J=497 
