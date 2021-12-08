@@ -184,7 +184,7 @@ The approach described in the document can be utilised by the majority of WMS se
 - [ArcGIS Server](https://enterprise.arcgis.com/en/server/latest/publish-services/windows/customizing-a-wms-getfeatureinfo-response.htm)
 
 The applications mentioned above differ in template customisation details, but eventually, they allow publication of customised GFI responses containing resolvable (dereferenceable) URIs.
-Sample implementations utilising above mentioned software packages are explained in document [Description of a tesbed implementation of downloadable WMS](sample-implementations.md).
+Sample implementations utilising above mentioned software packages are explained in document [Description of a testbed implementations of downloadable WMS](sample-implementations.md).
 
 # Examples of implementation <a name="examplesOfImplementation"></a> 
 
