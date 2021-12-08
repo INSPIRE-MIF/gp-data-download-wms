@@ -1,4 +1,4 @@
-# **Description of a tesbed implementations of downloadable WMS**
+# **Description of a testbed implementations of downloadable WMS**
 To help implement downloadable WMS services, examples of such services have been created utilising the following GIS server software:
 * MapServer [https://mapy.geoportal.gov.pl/wss/testbed/wmsdownload/mapserver](https://mapy.geoportal.gov.pl/wss/testbed/wmsdownload/mapserver)
 * GeoServer [https://mapy.geoportal.gov.pl/wss/testbed/wmsdownload/geoserver](https://mapy.geoportal.gov.pl/wss/testbed/wmsdownload/geoserver?SERVICE=WMS&REQUEST=GetCapabilities)
