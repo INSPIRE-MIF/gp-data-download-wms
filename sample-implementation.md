@@ -3,6 +3,7 @@ To help implement downloadable WMS services, examples of such services have been
 * MapServer https://mapy.geoportal.gov.pl/wss/testbed/wmsdownload/mapserver
 * GeoServer https://mapy.geoportal.gov.pl/wss/testbed/wmsdownload/geoserver
 * ArcGIS Server https://mapy.geoportal.gov.pl/wss/testbed/wmsdownload/arcgisserver
+
 Although the configuration of these services differs significantly from the user perspective, all WMS services look very similar.
 This document contains detail regarding the development of these services.
 
