@@ -18,7 +18,7 @@ The services publish an index map with the latest orthoimagery for Poland availa
 
 All orthophoto sheets are published on Interned using Apache web server in the described example.
 The sample data geometry is stored in the Polish PUWG 1992 coordinate reference system (EPSG:2180).
-The utilised data sample can be downloaded from here.
+The utilised data sample can be downloaded from [here](resources/data/current_ortho.zip).
 
 # Examples of implementations
 This document does not cover software installation or WMS services configuration details. These are at least sufficiently explained on the related vendors' websites. The paper only focuses on setting up services in the areas crucial to the implementation of downloadable WMS services. In particular, the document presents examples of changes that can be applied to adjust HTML GetFeatureInfo (GFI) responses of WMS services to display links to orthoimagery data set subsets (sheets).
