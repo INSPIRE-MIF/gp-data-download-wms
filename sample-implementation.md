@@ -22,7 +22,6 @@ The utilised data sample can be downloaded from here.
 This document does not cover software installation or WMS services configuration details. These are at least sufficiently explained on the related vendors' websites. The paper only focuses on setting up services in the areas crucial to the implementation of downloadable WMS services. In particular, the document presents examples of changes that can be applied to adjust HTML GetFeatureInfo (GFI) responses of WMS services to display links to orthoimagery data set subsets (sheets).
 The examples of the services are relatively simple. The documented approach can be applied to create better looking, more complex and interactive GFI responses containing additional Cascading Style Sheets (CSS) or JavaScript code.
 
-
 ## Example of MapServer implementation
 Details regarding the customisation of GFI responses are covered in detail in MapServer documentation.
 This section describes the configuration of the WMS service in MapServer published at https://mapy.geoportal.gov.pl/wss/testbed/wmsdownload/mapserver. This service uses MapServer instance in version 7.4.4 installed on Ubuntu 20.04 Linux distribution. The complete service configuration can be found in:
@@ -83,3 +82,5 @@ The code
 iterates through all features returned by the service and executes the code inside. The values of attributes are included into HTML code using following pattern ${feature.ATTRIBUTE_NAME.value}, e.g. ${feature.code.value}. The link to the downloadable orthoimagery sheet has been encoded using HTML <a> element e.g. <a href="${feature.url.value}" target="_blank">Click here to download</a>
 The example of the GFI response utilising the template can be seen by clicking on this link which is an example of a standard GFI request
 https://mapy.geoportal.gov.pl/wss/testbed/wmsdownload/geoserver?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetFeatureInfo&BBOX=429994.46573283208999783,523363.40774723986396566,439650.7120681336382404,533045.03186528861988336&CRS=EPSG:2180&WIDTH=763&HEIGHT=761&LAYERS=OrthoimageryIndex&STYLES=&FORMAT=image/png&QUERY_LAYERS=OrthoimageryIndex&INFO_FORMAT=text/html&I=491&J=299
+
+ ## Example of ArcGIS Server implementation
