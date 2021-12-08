@@ -50,7 +50,7 @@ In this case the HTML GFI template document is located in index.html file in exa
 </body>
 </html>
 ```
-The values of attributes are included in HTML code by providing their names in square brackets, e.g. '''[code]'''. The link to the downloadable orthoimagery sheet has been encoded using HTML <a> element, e.g. ```<a href="[url]" target="_blank">Click here to download</a>```
+The values of attributes are included in HTML code by providing their names in square brackets, e.g. ```[gsd]```. The link to the downloadable orthoimagery sheet has been encoded using HTML <a> element, e.g. ```<a href="[url]" target="_blank">Click here to download</a>```
 The example of the GFI response utilising the template can be seen by clicking on this link which is an example of a standard GFI request
 https://mapy.geoportal.gov.pl/wss/testbed/wmsdownload/mapserver?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetFeatureInfo&BBOX=46.73160157058823216,13.42562750000000094,56.94499842941176126,25.14667249999999754&CRS=EPSG:4326&WIDTH=1275&HEIGHT=1111&LAYERS=OrthoimageryIndex&STYLES=&FORMAT=image/png&QUERY_LAYERS=OrthoimageryIndex&INFO_FORMAT=text/html&I=929&J=497 
 
@@ -81,7 +81,7 @@ The code
 (…)
 </#list>
 ```
-iterates through all features returned by the service and executes the code inside. The values of attributes are included into HTML code using following pattern ```${feature.ATTRIBUTE_NAME.value}```, e.g. ```${feature.code.value}```. The link to the downloadable orthoimagery sheet has been encoded using HTML <a> element e.g. <a href="${feature.url.value}" target="_blank">Click here to download</a>
+iterates through all features returned by the service and executes the code inside. The values of attributes are included into HTML code using following pattern ```${feature.ATTRIBUTE_NAME.value}```, e.g. ```${feature.code.value}```. The link to the downloadable orthoimagery sheet has been encoded using HTML <a> element e.g. ```<a href="${feature.url.value}" target="_blank">Click here to download</a>```. 
 The example of the GFI response utilising the template can be seen by clicking on this link which is an example of a standard GFI request
 https://mapy.geoportal.gov.pl/wss/testbed/wmsdownload/geoserver?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetFeatureInfo&BBOX=429994.46573283208999783,523363.40774723986396566,439650.7120681336382404,533045.03186528861988336&CRS=EPSG:2180&WIDTH=763&HEIGHT=761&LAYERS=OrthoimageryIndex&STYLES=&FORMAT=image/png&QUERY_LAYERS=OrthoimageryIndex&INFO_FORMAT=text/html&I=491&J=299
 
