@@ -29,7 +29,9 @@ This section describes the configuration of the WMS service in MapServer publish
 •	service configuration file
 •	HTML template file
 To force MapServer to use a custom template, its location must be advertised in the MapServer configuration file, for example, by using the TEMPLATE parameter in the LAYER section of the configuration file. This is how it was done in the sample service.
+```
 TEMPLATE "index.html"
+```
 In this case the HTML GFI template document is located in index.html file in exactly the same folder as MapServer service configuraton file. The utilised content of index.html file looks like this 
 ```
 <!-- MapServer Template -->
@@ -54,8 +56,9 @@ https://mapy.geoportal.gov.pl/wss/testbed/wmsdownload/mapserver?SERVICE=WMS&VERS
 Details regarding the customisation of GFI responses are covered in detail in GeoServer documentation.
 This section describes the configuration of the WMS service in MapServer published at https://mapy.geoportal.gov.pl/wss/testbed/wmsdownload/geoserver. This service uses the GeoServer instance in version 2.20.1 installed on Ubuntu 20.04 Linux distribution. The complete service configuration can be found in the service workspace archive file.
 To utilise GeoServer, the template file has to be put in the appropriate location. In case of the sample service it is GEOSERVER_DATA_DIR/workspaces/<workspace>/<datastore>/<featuretype>/content.ftl
-Content.ftl file holding GFI HTML template looks like this 
- <html>
+Content.ftl file holding GFI HTML template looks like this
+``` 
+<html>
 <head><title>GeoServer GFI response</title></head>
 <body>
 <#list features as feature>
@@ -69,10 +72,14 @@ Content.ftl file holding GFI HTML template looks like this
 </#list>
 </body>
 </html>
+```
+ 
 The code 
+```
 <#list features as feature>
 (…)
 </#list>
+```
 iterates through all features returned by the service and executes the code inside. The values of attributes are included into HTML code using following pattern ${feature.ATTRIBUTE_NAME.value}, e.g. ${feature.code.value}. The link to the downloadable orthoimagery sheet has been encoded using HTML <a> element e.g. <a href="${feature.url.value}" target="_blank">Click here to download</a>
 The example of the GFI response utilising the template can be seen by clicking on this link which is an example of a standard GFI request
 https://mapy.geoportal.gov.pl/wss/testbed/wmsdownload/geoserver?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetFeatureInfo&BBOX=429994.46573283208999783,523363.40774723986396566,439650.7120681336382404,533045.03186528861988336&CRS=EPSG:2180&WIDTH=763&HEIGHT=761&LAYERS=OrthoimageryIndex&STYLES=&FORMAT=image/png&QUERY_LAYERS=OrthoimageryIndex&INFO_FORMAT=text/html&I=491&J=299
