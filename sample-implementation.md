@@ -25,7 +25,7 @@ This document does not cover software installation or WMS services configuration
 The examples of the services are relatively simple. The documented approach can be applied to create user friendly, better looking, more complex and interactive GFI responses containing additional Cascading Style Sheets (CSS) or JavaScript code.
 
 ## Example of MapServer implementation
-Details regarding the customisation of GFI responses are covered in detail in MapServer documentation.
+Details regarding the customisation of GFI responses are covered in detail in [MapServer documentation](https://mapserver.org/mapfile/template.html).
 This section describes the configuration of the WMS service in MapServer published at https://mapy.geoportal.gov.pl/wss/testbed/wmsdownload/mapserver. This service uses MapServer instance in version 7.4.4 installed on Ubuntu 20.04 Linux distribution. The complete service configuration can be found in:
 * service configuration file
 * HTML template file
@@ -55,7 +55,7 @@ The example of the GFI response utilising the template can be seen by clicking o
 https://mapy.geoportal.gov.pl/wss/testbed/wmsdownload/mapserver?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetFeatureInfo&BBOX=46.73160157058823216,13.42562750000000094,56.94499842941176126,25.14667249999999754&CRS=EPSG:4326&WIDTH=1275&HEIGHT=1111&LAYERS=OrthoimageryIndex&STYLES=&FORMAT=image/png&QUERY_LAYERS=OrthoimageryIndex&INFO_FORMAT=text/html&I=929&J=497 
 
 ## Example of GeoServer implementation
-Details regarding the customisation of GFI responses are covered in detail in GeoServer documentation.
+Details regarding the customisation of GFI responses are covered in detail in [GeoServer documentation](https://docs.geoserver.org/latest/en/user/tutorials/GetFeatureInfo/html.html).
 This section describes the configuration of the WMS service in MapServer published at [https://mapy.geoportal.gov.pl/wss/testbed/wmsdownload/geoserver](https://mapy.geoportal.gov.pl/wss/testbed/wmsdownload/geoserver?SERVICE=WMS&REQUEST=GetCapabilities). This service uses the GeoServer instance in version 2.20.1 installed on Ubuntu 20.04 Linux distribution. The complete service configuration can be found in the service workspace archive file.
 To utilise GeoServer, the template file has to be put in the appropriate location. In case of the sample service it is
 ```GEOSERVER_DATA_DIR/workspaces/<workspace>/<datastore>/<featuretype>/content.ftl```. Content.ftl file holding GFI HTML template looks like this:
