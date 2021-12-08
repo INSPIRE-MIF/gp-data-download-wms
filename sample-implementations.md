@@ -58,7 +58,7 @@ https://mapy.geoportal.gov.pl/wss/testbed/wmsdownload/mapserver?SERVICE=WMS&VERS
 Details regarding the customisation of GFI responses are covered in detail in [GeoServer documentation](https://docs.geoserver.org/latest/en/user/tutorials/GetFeatureInfo/html.html).
 This section describes the configuration of the WMS service in MapServer published at [https://mapy.geoportal.gov.pl/wss/testbed/wmsdownload/geoserver](https://mapy.geoportal.gov.pl/wss/testbed/wmsdownload/geoserver?SERVICE=WMS&REQUEST=GetCapabilities). This service uses the GeoServer instance in version 2.20.1 installed on Ubuntu 20.04 Linux distribution. The complete service configuration can be found in the service [workspace archive file](resources/GeoServer/testbed.zip).
 To utilise GeoServer, the template file has to be put in the appropriate location. In case of the sample service it is
-```GEOSERVER_DATA_DIR/workspaces/<workspace>/<datastore>/<featuretype>/content.ftl```. Content.ftl file holding GFI HTML template looks like this:
+```GEOSERVER_DATA_DIR/workspaces/<workspace>/<datastore>/<featuretype>/content.ftl```. Content.ftl file contains GFI HTML template, that looks like this:
 ``` 
 <html>
 <head><title>GeoServer GFI response</title></head>
