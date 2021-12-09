@@ -16,7 +16,7 @@ The services publish an index map with the latest orthoimagery for Poland availa
 * crs – coordinate reference system (CRS) in which the orthophotomap is available
 * url – the link that allows downloading a particular orthoimagery sheet
 
-All orthophoto sheets are published on Interned using Apache web server in the described example.
+All orthophoto sheets are published on Interned using Apache web server in the location specified in the url attribute.
 The sample data geometry is stored in the Polish PUWG 1992 coordinate reference system (EPSG:2180).
 The utilised data sample can be downloaded from [here](resources/data/current_ortho.zip).
 
