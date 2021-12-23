@@ -81,7 +81,8 @@ The code
 (…)
 </#list>
 ```
-iterates through all features returned by the service and executes the code inside. The values of attributes are included into HTML code using following pattern ```${feature.ATTRIBUTE_NAME.value}```, e.g. ```${feature.code.value}```. The link to the downloadable orthoimagery sheet has been encoded using HTML <a> element e.g. ```<a href="${feature.url.value}" target="_blank">Click here to download</a>```. 
+iterates through all features returned by the service and executes the code inside. The values of attributes are included into HTML code using following pattern ```${feature.ATTRIBUTE_NAME.value}```, e.g. ```${feature.code.value}```. The link to the downloadable orthoimagery sheet has been encoded using HTML <a> element e.g. ```<a href="${feature.url.value}" target="_blank">Click here to download</a>```.
+ GeoServer by default adds additional HTML code at the top and at the bottom of GFI response. This code can be changed or removed by modifying respectively files header.ftl and footer.ftl. These files are located in JAR file. For the version 2.20.1, these files can be found in ```GEOSERVER_LOCATION/webapps/geoserver/WEB-INF/lib/gs-wms-2.20.1.jar``` and within the JAR file in ```gs-wms-2.20.1.jar/org/geoserver/wms/featureinfo```.
 The example of the GFI response utilising the template can be seen by clicking link below
 https://mapy.geoportal.gov.pl/wss/testbed/wmsdownload/geoserver?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetFeatureInfo&BBOX=429994.46573283208999783,523363.40774723986396566,439650.7120681336382404,533045.03186528861988336&CRS=EPSG:2180&WIDTH=763&HEIGHT=761&LAYERS=OrthoimageryIndex&STYLES=&FORMAT=image/png&QUERY_LAYERS=OrthoimageryIndex&INFO_FORMAT=text/html&I=491&J=299
 
