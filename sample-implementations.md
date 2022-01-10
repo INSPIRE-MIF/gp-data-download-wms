@@ -87,3 +87,71 @@ The example of the GFI response utilising the template can be seen by clicking l
 https://mapy.geoportal.gov.pl/wss/testbed/wmsdownload/geoserver?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetFeatureInfo&BBOX=429994.46573283208999783,523363.40774723986396566,439650.7120681336382404,533045.03186528861988336&CRS=EPSG:2180&WIDTH=763&HEIGHT=761&LAYERS=OrthoimageryIndex&STYLES=&FORMAT=image/png&QUERY_LAYERS=OrthoimageryIndex&INFO_FORMAT=text/html&I=491&J=299
 
  ## Example of ArcGIS Server implementation
+ 
+ Details regarding the customisation of GFI responses are covered in detail in [ArcGIS documentation](https://enterprise.arcgis.com/en/server/10.8/publish-services/windows/customizing-a-wms-getfeatureinfo-response.htm).
+This section describes the configuration of the WMS service in ArcGIS published at https://mapy.geoportal.gov.pl/wss/testbed/wmsdownload/arcgis. This service uses ArcGIS instance in version 10.8. The complete service configuration can be found in:
+* [HTML template file](resources/ArcGIS/featureinfo_text_html.xsl)
+
+To change the ArcGIS template for text/html format, please edit the featureinfo_text_html.xsl file in location ...\ArcGIS\Server\Styles\WMS where ArcGIS Server is installed. 
+
+The utilised content of featureinfo_text_html.xsl file looks like this:
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:esri_wms="http://www.esri.com/wms" xmlns="http://www.esri.com/wms">
+	
+	<xsl:output method="html" indent="yes" encoding="UTF-8" version="4.01"/>
+	<xsl:template match="/">
+		<html>
+
+		<head><title>ArcGIS GetFeatureInfo output</title></head>
+		<body>
+			<h4>Orthoimagery sheet - ArcGIS</h4>
+			<xsl:for-each select="esri_wms:FeatureInfoResponse/esri_wms:FeatureInfoCollection/esri_wms:FeatureInfo">
+				
+					<xsl:for-each select="esri_wms:Field">
+							<xsl:choose>
+
+								<xsl:when test="esri_wms:FieldName[starts-with(., 'Download')]">
+									<strong><xsl:value-of select="esri_wms:FieldName" /></strong><br /><a target='_blank'><xsl:attribute name="href"><xsl:value-of select="esri_wms:FieldValue" /></xsl:attribute>Click here to download</a>
+								</xsl:when>
+								
+								<xsl:when test="esri_wms:FieldName[starts-with(., 'FID')]">
+								</xsl:when>
+
+								<xsl:otherwise>
+
+									<strong><xsl:value-of select="esri_wms:FieldName" /></strong><br />
+									<xsl:value-of select="esri_wms:FieldValue" /><br />
+									
+								</xsl:otherwise>
+							</xsl:choose>
+					</xsl:for-each>
+			</xsl:for-each>
+		</body>
+		</html>
+	</xsl:template>
+</xsl:stylesheet>
+
+```
+In the file above there are two conditions based on XSLT according to which the fields should be presented. One condition occurs when we are dealing with a field that should be in the form of a URL link. In this case, the field has name "Download", so we filter that text from GetFeatureInfo response:
+
+<xsl:when test="esri_wms:FieldName[starts-with(., 'Download')]">
+	<strong>
+		<xsl:value-of select="esri_wms:FieldName" /></strong><br /><a target='_blank'>
+		<xsl:attribute name="href">
+			<xsl:value-of select="esri_wms:FieldValue" />
+		</xsl:attribute>Click here to download
+	</a>
+</xsl:when>
+
+The second case is applied to the remaining fields and takes the value:
+
+<xsl:otherwise>
+	<strong>
+		<xsl:value-of select="esri_wms:FieldName" /></strong><br />
+	<xsl:value-of select="esri_wms:FieldValue" /><br />
+</xsl:otherwise>
+
+
+The example of the GFI response utilising the template can be seen by clicking link below which is an example of a standard GFI request
+https://mapy.geoportal.gov.pl/wss/testbed/wmsdownload/arcgis?SERVICE=WMS&request=GetFeatureInfo&version=1.3.0&layers=0&styles=&crs=EPSG:2180&bbox=602820.588413512,456315.157841157,615216.3423716865,469650.18451121036&width=1008&height=937&format=image/jpeg&transparent=true&query_layers=0&i=392&j=458&INFO_FORMAT=text/html
