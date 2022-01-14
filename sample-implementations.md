@@ -135,6 +135,7 @@ The utilised content of featureinfo_text_html.xsl file looks like this:
 ```
 In the file above there are two conditions based on XSLT according to which the fields should be presented. One condition occurs when we are dealing with a field that should be in the form of a URL link. In this case, the field has name "Download", so we filter that text from GetFeatureInfo response:
 
+```
 <xsl:when test="esri_wms:FieldName[starts-with(., 'Download')]">
 	<strong>
 		<xsl:value-of select="esri_wms:FieldName" /></strong><br /><a target='_blank'>
@@ -144,13 +145,19 @@ In the file above there are two conditions based on XSLT according to which the 
 	</a>
 </xsl:when>
 
+```
+
+
 The second case is applied to the remaining fields and takes the value:
 
+```
 <xsl:otherwise>
 	<strong>
 		<xsl:value-of select="esri_wms:FieldName" /></strong><br />
 	<xsl:value-of select="esri_wms:FieldValue" /><br />
 </xsl:otherwise>
+
+```
 
 
 The example of the GFI response utilising the template can be seen by clicking link below which is an example of a standard GFI request
