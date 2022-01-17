@@ -26,7 +26,7 @@ The examples of the services are relatively simple. The documented approach can 
 
 ## Example of MapServer implementation
 Details regarding the customisation of GFI responses are covered in detail in [MapServer documentation](https://mapserver.org/mapfile/template.html).
-This section describes the configuration of the WMS service in MapServer published at https://mapy.geoportal.gov.pl/wss/testbed/wmsdownload/mapserver. This service uses MapServer instance in version 7.4.4 installed on Ubuntu 20.04 Linux distribution. The complete service configuration can be found in:
+This section describes the configuration of the WMS service in MapServer published at https://mapy.geoportal.gov.pl/wss/testbed/wmsdownload/mapserver. This service uses MapServer instance in version 7.6.4 installed on Ubuntu 20.04 Linux distribution. The complete service configuration can be found in:
 * [service configuration file](resources/MapServer/indexortho.map)
 * [HTML template file](resources/MapServer/index.html)
 
