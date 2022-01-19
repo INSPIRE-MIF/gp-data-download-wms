@@ -46,7 +46,8 @@ In this case the HTML GFI template document is located in index.html file in exa
 		<strong>GSD:</strong><br>[item name="gsd" precision="2" format="$value m"]<br>
 		<strong>Color:</strong><br>[color]<br>
 		<strong>CRS:</strong><br>[crs]<br>
-		<strong>Download link:</strong><br><a href="[url]" target="_blank">Click here to download</a><br>
+		<strong>Download link:</strong><br>
+		<a href="[url]" target="_blank">Click here to download</a><br>
 	</body>
 </html>
 ```
@@ -70,7 +71,8 @@ To utilise GeoServer, the template file has to be put in the appropriate locatio
 			<strong>GSD:</strong><br>${feature.gsd.value}<br>
 			<strong>Color:</strong><br>${feature.color.value}<br>
 			<strong>CRS:</strong><br>${feature.crs.value}<br>
-			<strong>Download link:</strong><br><a href="${feature.url.value}" target="_blank">Click here to download</a><br>
+			<strong>Download link:</strong><br>
+			<a href="${feature.url.value}" target="_blank">Click here to download</a><br>
 		</#list>
 	</body>
 </html>
