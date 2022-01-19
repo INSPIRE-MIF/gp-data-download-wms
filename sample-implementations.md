@@ -38,16 +38,16 @@ In this case the HTML GFI template document is located in index.html file in exa
 ```
 <!-- MapServer Template -->
 <html>
-<head><title>MapServer GFI response</title></head>
-<body>
-<h4>Orthoimagery sheet - MapServer</h4>
-<strong>Code:</strong><br>[code]<br>
-<strong>Date of imagery:</strong><br>[date_s]<br>
-<strong>GSD:</strong><br>[item name="gsd" precision="2" format="$value m"]<br>
-<strong>Color:</strong><br>[color]<br>
-<strong>CRS:</strong><br>[crs]<br>
-<strong>Download link:</strong><br><a href="[url]" target="_blank">Click here to download</a><br>
-</body>
+	<head><title>MapServer GFI response</title></head>
+	<body>
+		<h4>Orthoimagery sheet - MapServer</h4>
+		<strong>Code:</strong><br>[code]<br>
+		<strong>Date of imagery:</strong><br>[date_s]<br>
+		<strong>GSD:</strong><br>[item name="gsd" precision="2" format="$value m"]<br>
+		<strong>Color:</strong><br>[color]<br>
+		<strong>CRS:</strong><br>[crs]<br>
+		<strong>Download link:</strong><br><a href="[url]" target="_blank">Click here to download</a><br>
+	</body>
 </html>
 ```
 The values of attributes are included in HTML code by providing their names in square brackets, e.g. ```[gsd]```. The link to the downloadable orthoimagery sheet has been encoded using HTML <a> element, e.g. ```<a href="[url]" target="_blank">Click here to download</a>```
@@ -61,18 +61,18 @@ To utilise GeoServer, the template file has to be put in the appropriate locatio
 ```GEOSERVER_DATA_DIR/workspaces/<workspace>/<datastore>/<featuretype>/content.ftl```. Content.ftl file contains GFI HTML template, that looks like this:
 ``` 
 <html>
-<head><title>GeoServer GFI response</title></head>
-<body>
-<#list features as feature>
-<h4>Orthoimagery sheet - GeoServer</h4>
-<strong>Code::</strong><br>${feature.code.value}<br>
-<strong>Date of imagery:</strong><br>${feature.date_s.value}<br>
-<strong>GSD:</strong><br>${feature.gsd.value}<br>
-<strong>Color:</strong><br>${feature.color.value}<br>
-<strong>CRS:</strong><br>${feature.crs.value}<br>
-<strong>Download link:</strong><br><a href="${feature.url.value}" target="_blank">Click here to download</a><br>
-</#list>
-</body>
+	<head><title>GeoServer GFI response</title></head>
+	<body>
+		<#list features as feature>
+			<h4>Orthoimagery sheet - GeoServer</h4>
+			<strong>Code::</strong><br>${feature.code.value}<br>
+			<strong>Date of imagery:</strong><br>${feature.date_s.value}<br>
+			<strong>GSD:</strong><br>${feature.gsd.value}<br>
+			<strong>Color:</strong><br>${feature.color.value}<br>
+			<strong>CRS:</strong><br>${feature.crs.value}<br>
+			<strong>Download link:</strong><br><a href="${feature.url.value}" target="_blank">Click here to download</a><br>
+		</#list>
+	</body>
 </html>
 ```
 The code 
