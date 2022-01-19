@@ -92,7 +92,7 @@ https://mapy.geoportal.gov.pl/wss/testbed/wmsdownload/geoserver?SERVICE=WMS&VERS
 This section describes the configuration of the WMS service in ArcGIS published at https://mapy.geoportal.gov.pl/wss/testbed/wmsdownload/arcgis. This service uses ArcGIS instance in version 10.8. The complete service configuration can be found in:
 * [HTML template file](resources/ArcGIS/featureinfo_text_html.xsl)
 
-To change the ArcGIS template for text/html format, please edit the featureinfo_text_html.xsl file in location ...\ArcGIS\Server\Styles\WMS where ArcGIS Server is installed. 
+To change the ArcGIS template for text/html format, please edit the featureinfo_text_html.xsl file in location ```...\ArcGIS\Server\Styles\WMS``` where ArcGIS Server is installed. 
 
 The utilised content of featureinfo_text_html.xsl file looks like this:
 ```
@@ -112,7 +112,13 @@ The utilised content of featureinfo_text_html.xsl file looks like this:
 							<xsl:choose>
 
 								<xsl:when test="esri_wms:FieldName[starts-with(., 'Download')]">
-									<strong><xsl:value-of select="esri_wms:FieldName" /></strong><br /><a target='_blank'><xsl:attribute name="href"><xsl:value-of select="esri_wms:FieldValue" /></xsl:attribute>Click here to download</a>
+									<strong><xsl:value-of select="esri_wms:FieldName" /></strong>
+									<br />
+									<a target='_blank'>
+										<xsl:attribute name="href">
+											<xsl:value-of select="esri_wms:FieldValue" />
+										</xsl:attribute>
+									Click here to download</a>
 								</xsl:when>
 								
 								<xsl:when test="esri_wms:FieldName[starts-with(., 'FID')]">
@@ -120,8 +126,10 @@ The utilised content of featureinfo_text_html.xsl file looks like this:
 
 								<xsl:otherwise>
 
-									<strong><xsl:value-of select="esri_wms:FieldName" /></strong><br />
-									<xsl:value-of select="esri_wms:FieldValue" /><br />
+									<strong><xsl:value-of select="esri_wms:FieldName" /></strong>
+									<br />
+									<xsl:value-of select="esri_wms:FieldValue" />
+									<br />
 									
 								</xsl:otherwise>
 							</xsl:choose>
