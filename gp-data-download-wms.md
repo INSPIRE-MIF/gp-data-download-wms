@@ -203,7 +203,7 @@ From the 31st of June 2020, the amendment of a Polish geodetic and cartographic 
 - digital terrain model (DTM)
   - PL-KRON86-NH elevation system [https://mapy.geoportal.gov.pl/wss/service/PZGIK/NMPT/WMS/SkorowidzeWUkladzieKRON86](https://mapy.geoportal.gov.pl/wss/service/PZGIK/NMPT/WMS/SkorowidzeWUkladzieKRON86)
   - PL- EVRF2007-NH elevation system [https://mapy.geoportal.gov.pl/wss/service/PZGIK/NMPT/WMS/SkorowidzeWUkladzieEVRF2007](https://mapy.geoportal.gov.pl/wss/service/PZGIK/NMPT/WMS/SkorowidzeWUkladzieEVRF2007)
-- LIDARdata
+- LIDAR data
   - PL-KRON86-NH elevation system [https://mapy.geoportal.gov.pl/wss/service/PZGIK/DanePomNMT/WMS/SkorowidzeWUkladzieKRON86](https://mapy.geoportal.gov.pl/wss/service/PZGIK/DanePomNMT/WMS/SkorowidzeWUkladzieKRON86)
   - PL- EVRF2007-NH elevation system [https://mapy.geoportal.gov.pl/wss/service/PZGIK/DanePomNMT/WMS/SkorowidzeWUkladzieEVRF2007](https://mapy.geoportal.gov.pl/wss/service/PZGIK/DanePomNMT/WMS/SkorowidzeWUkladzieEVRF2007)
 - basic geodetic network points [https://integracja.gugik.gov.pl/cgi-bin/PodstawowaOsnowaGeodezyjna](https://integracja.gugik.gov.pl/cgi-bin/PodstawowaOsnowaGeodezyjna)
