@@ -91,7 +91,20 @@ https://mapy.geoportal.gov.pl/wss/testbed/wmsdownload/geoserver?SERVICE=WMS&VERS
  ## Example of ArcGIS Server implementation
  
  Details regarding the customisation of GFI responses are covered in detail in [ArcGIS documentation](https://enterprise.arcgis.com/en/server/10.8/publish-services/windows/customizing-a-wms-getfeatureinfo-response.htm).
-This section describes the configuration of the WMS service in ArcGIS published at https://mapy.geoportal.gov.pl/wss/testbed/wmsdownload/arcgis. This service uses ArcGIS instance in version 10.8. The complete service configuration can be found in:
+This section describes the configuration of the WMS service in ArcGIS published at https://mapy.geoportal.gov.pl/wss/testbed/wmsdownload/arcgis. This service uses ArcGIS instance in version 10.8. 
+
+In order to publish modified GetFeatureInfo ressponse XSLT transformation have to be applied. To simplify XSLT transformation file, default sample dataset column names (attributes) were changed using alliases. In addition some attributes were turn off. These was done in MXD ArcGIS map configuration file. See the tabla and the figure below.
+	
+Attribute name|Alias|
+:------------:|:---------------:|
+code          |Code:|
+gsd           |GSD:|
+color         |Color:|
+crs           |CRS:|
+date_s        |Date of imagery:|
+url           |Download link:|
+	
+The GetFeatureInfo response configuration can be found in:
 * [HTML template file](resources/ArcGIS/featureinfo_text_html.xsl)
 
 To change the ArcGIS template for text/html format, please edit the featureinfo_text_html.xsl file in location ```...\ArcGIS\Server\Styles\WMS``` where ArcGIS Server is installed. 
