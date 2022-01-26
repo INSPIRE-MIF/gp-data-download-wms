@@ -2,9 +2,9 @@ Head Office of Geodesy and Cartography
 
 # **Guidelines for making spatial data downloadable via WMS services**
 
-`Version 0.01`
+`Version 0.02`
 
-`The 16th of February 2021`
+`The 26th of January 2022`
 
 # Table of contents
 
