@@ -129,7 +129,7 @@ The elements of the services that need some customisations to support the data d
 
 ### GetCapabilities <a name="getCapabilities"></a> 
 
-GetCapabilities operation works the same as in the case of standard WMS service. The service must publish at least one layer containing a spatial extend of downloadable spatial data sets. This is further explained in the next sections.
+GetCapabilities operation works the same as in the case of standard WMS service. The service must publish at least one layer containing a spatial extent of downloadable spatial data sets. This is further explained in the next sections.
 
 ### GetMap <a name="getMap"></a> 
 
