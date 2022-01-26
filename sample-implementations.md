@@ -93,7 +93,7 @@ https://mapy.geoportal.gov.pl/wss/testbed/wmsdownload/geoserver?SERVICE=WMS&VERS
  Details regarding the customisation of GFI responses are covered in detail in [ArcGIS documentation](https://enterprise.arcgis.com/en/server/10.8/publish-services/windows/customizing-a-wms-getfeatureinfo-response.htm).
 This section describes the configuration of the WMS service in ArcGIS published at https://mapy.geoportal.gov.pl/wss/testbed/wmsdownload/arcgis. This service uses ArcGIS instance in version 10.8. 
 
-In order to publish a modified GetFeatureInfo response, XSLT transformation has to be applied. To simplify XSLT transformation file, default sample dataset column names (attributes) were changed using aliases. In addition, some attributes were turned off. These changes were applied in MXD ArcGIS map configuration file. See the table and the figure below.
+In order to publish a modified GetFeatureInfo response, XSLT transformation has to be applied. To simplify XSLT transformation file, default sample dataset column names (attributes) were changed using aliases. In addition, some unwanted attributes were turned off. These changes were applied in MXD ArcGIS map configuration file. See the table and the figure below.
 	
 Attribute name|Alias|
 :------------:|:---------------:|
