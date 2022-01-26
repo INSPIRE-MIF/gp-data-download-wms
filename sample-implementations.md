@@ -5,7 +5,7 @@ To help implement downloadable WMS services, examples of such services have been
 * ArcGIS Server [https://mapy.geoportal.gov.pl/wss/testbed/wmsdownload/arcgisserver](https://mapy.geoportal.gov.pl/wss/testbed/wmsdownload/arcgisserver?SERVICE=WMS&REQUEST=GetCapabilities)
 
 Although the configuration of these services differs significantly, all WMS services look almost identical from a user perspective.
-This document explains specific details regarding the development of these services.
+This document explains specific details regarding the configuration of these services.
 
 # Sample data set
 The services publish an index map with the latest orthoimagery for Poland available for December 2021. The sample data is available in shapefile format. The data contains polygon geometry covering spatial extents of each available orthoimagery sheet and, among others, includes the following key attributes:
