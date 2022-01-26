@@ -104,6 +104,8 @@ crs           |CRS:|
 date_s        |Date of imagery:|
 url           |Download link:|
 	
+![ArcGIS configuration](resources/pictures/ArcGISServer.png "ArcGIS configuration")
+	
 The GetFeatureInfo response configuration can be found in:
 * [HTML template file](resources/ArcGIS/featureinfo_text_html.xsl)
 
