@@ -12,7 +12,7 @@ The services publish an index map with the latest orthoimagery for Poland availa
 * code – the code name of a particular orthoimagery sheet
 * date_s – the date when the aerial photography was taken that was utilised in the creation of orthoimagery
 * gsd – ground sample distance (GSD) in meters
-* color – spectral characteristics of the orthophoto, e.g. RGB or CIR
+* color – spectral characteristics of the orthophoto, e.g. RGB, CIR, etc.
 * crs – coordinate reference system (CRS) in which the orthophotomap is available
 * url – the link that allows downloading a particular orthoimagery sheet
 
