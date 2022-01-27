@@ -9,12 +9,12 @@ This document explains specific details regarding the configuration of these ser
 
 # Sample data set
 The services publish an index map with the latest orthoimagery for Poland available for December 2021. The sample data is available in shapefile format. The data contains polygon geometry covering spatial extents of each available orthoimagery sheet and, among others, includes the following key attributes:
-* code – the code name of a particular orthoimagery sheet
-* date_s – the date when the aerial photography was taken that was utilised in the creation of orthoimagery
-* gsd – ground sample distance (GSD) in meters
-* color – spectral characteristics of the orthophoto, e.g. RGB, CIR, etc.
-* crs – coordinate reference system (CRS) in which the orthophotomap is available
-* url – the link that allows downloading a particular orthoimagery sheet
+* code – the code name of a particular orthoimagery sheet,
+* date_s – the date when the aerial photography was taken that was utilised in the creation of orthoimagery,
+* gsd – ground sample distance (GSD) in meters,
+* color – spectral characteristics of the orthophoto, e.g. RGB, CIR, etc.,
+* crs – coordinate reference system (CRS) in which the orthophotomap is available,
+* url – the link that allows downloading a particular orthoimagery sheet.
 
 All orthophoto sheets are published on Interned using Apache web server in the location specified in the url attribute.
 The sample data geometry is stored in the Polish PUWG 1992 coordinate reference system (EPSG:2180).
