@@ -2,9 +2,9 @@ Head Office of Geodesy and Cartography
 
 # **Guidelines for making spatial data downloadable via WMS services**
 
-`Version 0.01`
+`Version 0.02`
 
-`The 16th of February 2021`
+`The 26th of January 2022`
 
 # Table of contents
 
@@ -91,7 +91,7 @@ Within the INSPIRE framework view services are rather intended for simple data a
 
 On the other hand, download services are rather complex. Moreover, there are different types of download services designed for sharing various types of spatial datasets: Web Feature Service (WFS), ATOM feed, Sensor Observation Service (SOS) and finally Web Coverage Service (WCS). Each of the types requires specific client software that "understands" the particular standard. It is difficult in practice to find client applications that fully support the above-mentioned standards of download services. It is similar in the case of a data publisher perspective. It is much easier to set up and publish a view service compared to the download service.
 
-The complexity related to download services has been noticed by INSPIRE implementers and currently INSPIRE community is working on the adoption of new, less demanding standards OGC API – Features and OGC SensorThings API. However, for the time being, parrel existence and utilisations of so many download standards with similar or overlapping functionalities might be even more confusing for data providers and potential data users.
+The complexity related to download services has been noticed by INSPIRE implementers and INSPIRE community adopted as good practices new, less demanding standards [OGC API – Features](https://github.com/INSPIRE-MIF/gp-ogc-api-features/blob/master/spec/oapif-inspire-download.md) and [OGC SensorThings API](https://github.com/INSPIRE-MIF/gp-ogc-sensorthings-api). However, for the time being, parrel existence and utilisations of so many download standards with similar or overlapping functionalities might be even more confusing for data providers and potential data users.
 
 So, the question may arise if view services offer so many advantages, can they be used also for data download? In general, the answer is yes. This document explains how this can be achieved and what are the advantages and shortcomings of the proposed approach.
 
@@ -117,7 +117,7 @@ The view services allowing download must support GetCapabilities and GetMap, Get
 
 The view services allowing download from a service's user perspective works like any other WMS service. The solution uses WMS service, so it can be utilised in any application adopting the WMS standard. In a typical use case scenario shown it Figure 1, a user via the WMS client application points out on the map location for which data should be downloaded. GetFeatureInfo request is sent to the server, and the response returns metadata and links to the dataset subset covering an indicated area. Then the user clicks on the link to an appropriate resource (spatial data set or its subset) and downloads it.
 
-![The sequence diagram showing typical use case scenario of WMS download service](https://github.com/marcingrudzien/gp-data-download-wms/blob/main/resources/pictures/downloadDataViaWMS.png "The sequence diagram showing typical use case scenario of WMS download service")
+![The sequence diagram showing typical use case scenario of WMS download service](resources/pictures/downloadDataViaWMS.png "The sequence diagram showing typical use case scenario of WMS download service")
 
 _Figure 1 The sequence diagram showing typical use case scenario of WMS download service._
 
@@ -129,7 +129,7 @@ The elements of the services that need some customisations to support the data d
 
 ### GetCapabilities <a name="getCapabilities"></a> 
 
-GetCapabilities operation works the same as in the case of standard WMS service. The service must publish at least one layer containing a spatial extend of downloadable spatial data sets. This is further explained in the next sections.
+GetCapabilities operation works the same as in the case of standard WMS service. The service must publish at least one layer containing a spatial extent of downloadable spatial data sets. This is further explained in the next sections.
 
 ### GetMap <a name="getMap"></a> 
 
@@ -184,6 +184,7 @@ The approach described in the document can be utilised by the majority of WMS se
 - [ArcGIS Server](https://enterprise.arcgis.com/en/server/latest/publish-services/windows/customizing-a-wms-getfeatureinfo-response.htm)
 
 The applications mentioned above differ in template customisation details, but eventually, they allow publication of customised GFI responses containing resolvable (dereferenceable) URIs.
+Sample implementations utilising above mentioned software packages are explained in document [Description of a testbed implementations of downloadable WMS](sample-implementations.md).
 
 # Examples of implementation <a name="examplesOfImplementation"></a> 
 
@@ -202,7 +203,7 @@ From the 31st of June 2020, the amendment of a Polish geodetic and cartographic 
 - digital terrain model (DTM)
   - PL-KRON86-NH elevation system [https://mapy.geoportal.gov.pl/wss/service/PZGIK/NMPT/WMS/SkorowidzeWUkladzieKRON86](https://mapy.geoportal.gov.pl/wss/service/PZGIK/NMPT/WMS/SkorowidzeWUkladzieKRON86)
   - PL- EVRF2007-NH elevation system [https://mapy.geoportal.gov.pl/wss/service/PZGIK/NMPT/WMS/SkorowidzeWUkladzieEVRF2007](https://mapy.geoportal.gov.pl/wss/service/PZGIK/NMPT/WMS/SkorowidzeWUkladzieEVRF2007)
-- LIDARdata
+- LIDAR data
   - PL-KRON86-NH elevation system [https://mapy.geoportal.gov.pl/wss/service/PZGIK/DanePomNMT/WMS/SkorowidzeWUkladzieKRON86](https://mapy.geoportal.gov.pl/wss/service/PZGIK/DanePomNMT/WMS/SkorowidzeWUkladzieKRON86)
   - PL- EVRF2007-NH elevation system [https://mapy.geoportal.gov.pl/wss/service/PZGIK/DanePomNMT/WMS/SkorowidzeWUkladzieEVRF2007](https://mapy.geoportal.gov.pl/wss/service/PZGIK/DanePomNMT/WMS/SkorowidzeWUkladzieEVRF2007)
 - basic geodetic network points [https://integracja.gugik.gov.pl/cgi-bin/PodstawowaOsnowaGeodezyjna](https://integracja.gugik.gov.pl/cgi-bin/PodstawowaOsnowaGeodezyjna)
